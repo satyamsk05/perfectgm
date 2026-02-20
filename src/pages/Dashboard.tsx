@@ -64,9 +64,9 @@ const Dashboard: React.FC = () => {
                 <div className="flex-grow space-y-8">
                     {/* Header with Explorer Aesthetic */}
                     <div className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 rounded-[3rem] p-8 md:p-12 border border-slate-800 shadow-2xl">
-                        {/* Interactive Background Elements */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] -mr-32 -mt-32 rounded-full animate-pulse" />
-                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 blur-[80px] -ml-24 -mb-24 rounded-full" />
+                        {/* Interactive Background Elements - Optimized */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[64px] -mr-32 -mt-32 rounded-full" />
+                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/5 blur-[48px] -ml-24 -mb-24 rounded-full" />
 
                         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
                             <div className="space-y-4">
@@ -106,10 +106,10 @@ const Dashboard: React.FC = () => {
                             <motion.div
                                 key={stat.label}
                                 whileHover={{ y: -8, scale: 1.02 }}
-                                className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 border border-slate-200/50 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 overflow-hidden"
+                                className="group relative bg-white/95 dark:bg-slate-900/95 rounded-[2.5rem] p-6 border border-slate-200/50 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 overflow-hidden optimize-gpu"
                             >
-                                {/* Thematic Background Accent */}
-                                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stat.color} blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+                                {/* Thematic Background Accent - Simplified */}
+                                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${stat.color} blur-[24px] opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                                 <div className="relative z-10 space-y-4">
                                     <div className="flex items-center justify-between">
@@ -144,7 +144,7 @@ const Dashboard: React.FC = () => {
 
                     {/* Recent Activity Section - Refined Layout */}
                     <div className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200/50 dark:border-slate-800 p-8 shadow-2xl relative overflow-hidden">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-slate-50/10 dark:bg-white/5 opacity-50 blur-[120px] pointer-events-none" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-slate-50/5 dark:bg-white/5 opacity-50 blur-[80px] pointer-events-none" />
 
                         <div className="relative z-10 flex items-center justify-between mb-10">
                             <div className="flex items-center space-x-5">

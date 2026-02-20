@@ -26,12 +26,7 @@ import Layout from './components/Layout';
 
 import { useLanguage } from './context/LanguageContext';
 
-const Home = () => {
-  const { t } = useLanguage();
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedNetwork, setSelectedNetwork] = useState<any>(null);
+const ClockDisplay = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -42,6 +37,20 @@ const Home = () => {
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString('en-US', { hour12: false });
   };
+
+  return (
+    <div className="text-3xl font-black text-slate-800 tracking-tighter heading-font tabular-nums">
+      {formatTime(currentTime)}
+    </div>
+  );
+};
+
+const Home = () => {
+  const { t } = useLanguage();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeFilter, setActiveFilter] = useState('All');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedNetwork, setSelectedNetwork] = useState<any>(null);
 
   const networks: Network[] = [
     { name: 'Base', bgClass: 'bg-blue-600', icon: 'clogo/base.jpg', badges: ['new', 'hot'], actions: [{ label: 'GM' }, { label: 'GN' }, { label: 'Deploy NFT' }, { label: 'Deploy Counter' }] },
@@ -162,9 +171,7 @@ const Home = () => {
                     <span className="text-slate-800 font-bold text-sm">{t.resetDaily}</span>
                   </div>
                 </div>
-                <div className="text-3xl font-black text-slate-800 tracking-tighter heading-font tabular-nums">
-                  {formatTime(currentTime)}
-                </div>
+                <ClockDisplay />
               </motion.div>
             </div>
 

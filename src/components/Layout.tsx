@@ -9,7 +9,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div className="min-h-screen flex flex-col relative overflow-x-hidden">
-            <div className="mesh-gradient" />
+            <div className="mesh-gradient" style={{ willChange: 'transform, opacity' }} />
             <Header />
             {children}
             <Footer />

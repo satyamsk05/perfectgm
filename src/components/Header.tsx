@@ -105,8 +105,8 @@ const Header: React.FC = () => {
     return (
         <>
             <header className="sticky top-0 z-50 w-full glass-effect border-b border-slate-200/50">
-                {/* Dynamic Background Glow */}
-                <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-r from-transparent via-primary/5 to-transparent blur-3xl -z-10 animate-pulse pointer-events-none" />
+                {/* Dynamic Background Glow - Optimized */}
+                <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-r from-transparent via-primary/5 to-transparent blur-xl -z-10 pointer-events-none" />
 
                 {/* Top Row: Brand and Actions */}
                 <div className="max-w-8xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between border-b border-slate-100/30">

@@ -32,11 +32,11 @@ const NetworkCard: React.FC<NetworkCardProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{
-                y: -10,
-                boxShadow: "0 30px 60px -15px rgba(0,0,0,0.1), 0 0 40px rgba(59, 130, 246, 0.05)"
+                y: -5,
+                boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)"
             }}
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="group relative bg-white/80 backdrop-blur-3xl rounded-[2.5rem] p-5 border border-slate-200/50 transition-all cursor-pointer flex flex-col items-center overflow-hidden h-full shadow-sm"
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            className="group relative bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-[2.5rem] p-5 border border-slate-200/50 dark:border-slate-800 transition-all cursor-pointer flex flex-col items-center overflow-hidden h-full shadow-sm optimize-gpu scroll-lazy"
         >
             {/* Top Bar (Heart & Badges) */}
             <div className="w-full flex justify-between items-start mb-2">
